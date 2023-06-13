@@ -1,3 +1,4 @@
+using System.Net.Mime;
 using Line.Messaging;
 using Line.Messaging.Webhooks;
 
@@ -24,11 +25,20 @@ public class LineBotApp : WebhookApplication
                 var channelId = ev.Source.Id;
                 //使用者Id
                 var userId = ev.Source.UserId;
-                    
+                
+                var text = ((TextEventMessage)ev.Message).Text;
+                var outputText = text;
+                
+                if (text.Contains("嗨") && text.Contains("你好"))
+                {
+                    text = "哈囉";
+                }
+
+                
                 //回傳 hellow
                 result = new List<ISendMessage>
                 {
-                    new TextMessage("怎麼會這樣")
+                    new TextMessage("怎麼會這樣"+ text)
                 };
             }
                 break;
