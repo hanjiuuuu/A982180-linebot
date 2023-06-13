@@ -38,7 +38,7 @@ public class LineBotApp : WebhookApplication
                 //回傳 hellow
                 result = new List<ISendMessage>
                 {
-                    new TextMessage("怎麼會這樣"+ text)
+                    new TextMessage("怎麼會這樣"+ ((TextEventMessage)ev.Message).Text)
                 };
             }
                 break;
