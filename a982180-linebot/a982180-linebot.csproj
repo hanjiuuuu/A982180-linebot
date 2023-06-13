@@ -7,4 +7,19 @@
         <RootNamespace>a982180_linebot</RootNamespace>
     </PropertyGroup>
 
+    <ItemGroup>
+      <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="6.0.13" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Folder Include="Areas\npc\Controllers\" />
+      <Folder Include="Areas\npc\Data\" />
+      <Folder Include="Areas\npc\Models\" />
+      <Folder Include="Areas\npc\Views\" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <None Remove="ScaffoldingReadMe.txt" />
+    </ItemGroup>
+
 </Project>
