@@ -26,19 +26,19 @@ public class LineBotApp : WebhookApplication
                 //使用者Id
                 var userId = ev.Source.UserId;
                 
-                var text = ((TextEventMessage)ev.Message).Text;
-                var outputText = text;
+                var Text = ((TextEventMessage)ev.Message).Text;
+                var outputText = Text;
                 
-                if (text.Contains("嗨") && text.Contains("你好"))
+                if (Text.Contains("嗨") && Text.Contains("你好"))
                 {
-                    text = "哈囉";
+                    Text = "哈囉";
                 }
 
                 
                 //回傳 hellow
                 result = new List<ISendMessage>
                 {
-                    new TextMessage("怎麼會這樣"+ ((TextEventMessage)ev.Message).Text)
+                    new TextMessage("怎麼會這樣"+ ((TextEventMessage) ev.Message).Text)
                 };
             }
                 break;
